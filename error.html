@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 | Page Not Found</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: hsl(222, 47%, 11%);
+      color: hsl(210, 40%, 98%);
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Floating glowing backdrops */
+    .glow-backdrop {
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, rgba(0,0,0,0) 70%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .error-container {
+      max-width: 600px;
+      width: 100%;
+      padding: 50px 40px;
+      border-radius: 24px;
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      z-index: 5;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .error-container:hover {
+      transform: translateY(-5px);
+      border-color: rgba(14, 165, 233, 0.3);
+    }
+
+    .error-code {
+      font-family: 'Outfit', sans-serif;
+      font-size: 7.5rem;
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(135deg, hsl(210, 40%, 98%) 30%, hsl(271, 91%, 65%));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+      letter-spacing: -2px;
+    }
+
+    .error-message {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: hsl(210, 40%, 98%);
+      margin-bottom: 15px;
+    }
+
+    .error-details {
+      font-size: 1rem;
+      color: hsl(215, 20%, 75%);
+      margin-bottom: 35px;
+      line-height: 1.7;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      background: linear-gradient(135deg, hsl(199, 89%, 48%), hsl(271, 91%, 65%));
+      color: white;
+      box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(14, 165, 233, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="glow-backdrop" style="top: -100px; left: -100px;"></div>
+  <div class="glow-backdrop" style="bottom: -100px; right: -100px; background: radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, rgba(0,0,0,0) 70%);"></div>
+
+  <div class="error-container">
+    <div class="error-code">404</div>
+    <h1 class="error-message">Oops! Page Not Found</h1>
+    <p class="error-details">
+      It looks like the page you were trying to reach doesn't exist or has been moved.<br>
+      Don't worry — you can click below to safely return to the home page.
+    </p>
+    <a href="index.html" class="btn-primary"><i class="fas fa-arrow-left"></i> Back to Home</a>
+  </div>
+</body>
+</html>
